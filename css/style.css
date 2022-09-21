@@ -19,6 +19,9 @@ main {
 .container {
     padding:10px;
 }
+.flex {
+    display: flex;
+}
 .white {
     color:white;
 }
@@ -33,6 +36,7 @@ main {
     background-color: black;
     opacity:0.5;
     text-align: right;
+    z-index: 998;
 }
 #topbar a {
     line-height: 10vh;
@@ -40,6 +44,32 @@ main {
 }
 /* MAIN CONTENT */
 /* BOTTOMBAR */
+#bottombar {
+    width:100%;
+    height: 12.5vh;
+    background-color: #282828;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: 999;
+    justify-content: space-between;
+}
+.btm-left {
+    width: 200px;
+    height:100%;
+    background-color: lime;
+}
+.btm-right {
+    width: 200px;
+    height:100%;
+    background-color: lime;
+}
+.btm-centre {
+    width: 300px;
+    height:100%;
+    background-color: lime;
+    flex-shrink: 2;
+}
 /* MEDIA QUERIES */
 @media screen and (max-width:1100px) {
 
