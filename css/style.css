@@ -21,6 +21,7 @@ main {
     --bottombar:80px;
     --main-color: darkgray;
     --topbar:10vh;
+    --icons: 2rem
 }
 .container {
     width:100%;
@@ -205,21 +206,76 @@ li {
     justify-content: space-between;
     padding: 7.5px;
 }
+
+.btm-left .flex {
+    align-items: center;
+
+}
+.btm-left img {
+    height: var(--bottombar);
+    margin-right: 5px;
+
+}
+.btm-left h4 {
+    color:white;
+    font-size: 1.6rem;
+}
 .btm-left {
-    width: 200px;
-    height:100%;
-    background-color: lime;
+    color: var(--main-color);
+    font-size:1.2rem;
+    width:300px;
+}
+.fav {
+
+    padding-left: 20px;
+    font-size: var(--icons);
+    vertical-align: center;
+}
+.fav *{
+    color: var(--main-color);
+}
+.fav :first-child {
+    padding-left:10px;
+}
+
+
+.console a {
+    font-size: var(--icons);
+    color: var(--main-color);
+    margin: 20px;
+}
+.console .flex {
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.timeline::before {
+    content:"";
+    height: 2px;
+    width:400px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    text-align: center;
 }
 .btm-right {
-    width: 200px;
-    height:100%;
-    background-color: lime;
-}
-.btm-centre {
     width: 300px;
-    height:100%;
-    background-color: fuchsia;
-    flex-shrink: 3;
+}
+.btm-right .flex {
+    justify-content: flex-end;
+    align-items: center;
+}
+.btm-right a {
+    color:white;
+    font-size: var(--icons);
+    margin-right: 10px;
+    line-height: 80px;
+}
+.btm-right .flex::after {
+    content:"";
+    height: 2px;
+    width:150px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    text-align: center;
 }
 /* MEDIA QUERIES */
 /* MEDIUM DESKTOP */
