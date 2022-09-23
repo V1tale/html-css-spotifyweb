@@ -253,7 +253,10 @@ li {
     justify-content: space-between;
     padding: 7.5px;
 }
-
+#bottombar a :Hover {
+    color:white;
+    transform:scale(1.5);
+}
 .btm-left .flex {
     align-items: center;
 
@@ -269,6 +272,12 @@ li {
 .btm-left h4 {
     color:white;
     font-size: 1.6rem;
+}
+.btm-left a {
+    color: var(--main-color);
+}
+.btm-left :hover {
+    color:white;
 }
 .btm-left {
     color: var(--main-color);
@@ -287,53 +296,67 @@ li {
 }
 .btm-centre {
     width: 33%;
+    position:relative;
 }
-
 .console a {
     font-size: 2rem;
     color: var(--main-color);
-    margin: 20px;
 }
 .console .flex {
     margin-bottom: 10px;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 4rem;
 }
-.timeline::after {
+.start ::after {
     content:"";
     height: 2px;
-    width:85%;
-    background-color: var(--main-color);
-    border-radius: 10px;
-    text-align: center;
-}
-.timeline::before {
-    content:"";
-    height: 2px;
-    width:15%;
+    width:30%;
     background-color: white;
+    border-radius: 10px;
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    left:30px;
+}
+.start i {
+    position:absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    line-height: .5rem;
+    z-index: 10;
+    opacity: 0%;
+    margin-left:30px;
+    padding-left: 16.5%;
+}
+.start i:hover {
+    opacity:100%;
+}
+.start:hover ::after {
+    background-color: lime;
+}
+.finish ::before {
+    content:"";
+    height: 2px;
+    width:70%;
+    background-color: var(--main-color);
     border-radius: 10px;
     text-align: center;
     position:absolute;
     top: 0;
-    left:30px;
+    right:30px;
+    cursor: pointer;
 }
 .timeline {
     width:100%;
     line-height: .4rem;
     position: relative;
+    justify-content: space-between;
 }
 .timeline h4{
     color:white;
     letter-spacing: 1.5px;
 
-}
-.timeline :last-child {
-    position: absolute;
-    bottom:0;
-    left:90%;
-}
-.timeline :first-child {
-    padding-right:10px;
 }
 
 .btm-right {
@@ -342,10 +365,11 @@ li {
 .btm-right .flex {
     justify-content: flex-end;
     align-items: center;
+    position: relative;
 }
 
 .btm-right a {
-    color:white;
+    color:var(--main-color);
     font-size: var(--icons);
     margin-right: 10px;
     line-height: 80px;
@@ -353,9 +377,10 @@ li {
 .btm-right .flex::after {
     content:"";
     height: 2px;
-    width:100px;
+    width:50px;
     background-color: white;
     border-radius: 10px;
+    padding-right: 50px;
     text-align: center;
 }
 /* MEDIA QUERIES */
@@ -418,5 +443,9 @@ li {
     }
     #mobile li{
         text-align: center;
+        cursor: pointer;
+    }
+    #mobile :hover {
+        color:white;
     }
 }
